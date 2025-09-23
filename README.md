@@ -11,7 +11,7 @@ An educational mobile application designed to teach children aged 6–12 about c
 
 ### 🛠️ Tech Stack
 Frontend: Flutter (Dart)  
-Backend (Prototype): Local JSON/state (extendable to SQLite) 
+Backend (Prototype): Local JSON/state (extendable to SQLite)   
 IDE/Tools: Visual Studio Code, GitHub, Flutter DevTools  
 Testing Environment: Xcode Simulator (iOS)
 
