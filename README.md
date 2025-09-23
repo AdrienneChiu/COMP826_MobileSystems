@@ -45,6 +45,9 @@ Testing Environment: Xcode Simulator (iOS)
 - Select your desired iOS device in the simulator (e.g., iPhone 16).  
 - For Android testing, run on an Android Emulator via Android Studio.
 
+  Note: Check Flutter setup - Run ```flutter doctor``` to verify Flutter, Xcode, and simulator configurations. This command highlights missing dependencies or version issues.
+
+
 # 👩‍💻 Author
 
 Developed by Adrienne Chiu as part of COMP826 Mobile Systems Development.
