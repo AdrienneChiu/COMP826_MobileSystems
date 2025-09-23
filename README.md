@@ -1,4 +1,4 @@
-# 📱 Cyber Safety Learning App for Children
+# 📱 CyberBuddy - Cyber Safety Learning App for Children
 
 An educational mobile application designed to teach children aged 6–12 about cyber safety through interactive lessons, gamified quizzes, and motivational rewards. Built with Flutter and tested on the Xcode iOS Simulator.
 
