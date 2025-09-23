@@ -16,7 +16,7 @@ IDE/Tools: Visual Studio Code, GitHub, Flutter DevTools
 Testing Environment: Xcode Simulator (iOS)
 
 # 📦 Installation
-**Prerequisites**
+### Prerequisites
 
 - Download [Flutter SDK](https://docs.flutter.dev/get-started/install)  
 
@@ -24,7 +24,7 @@ Testing Environment: Xcode Simulator (iOS)
 
 - iOS Simulator configured (e.g., iPhone 16)  
   
-**Steps**
+### Steps
 
 1. Clone the repository
 
