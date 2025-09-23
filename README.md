@@ -1,16 +1,18 @@
 # 📱 Cyber Safety Learning App for Children
 
-An educational mobile application designed to teach children about cyber safety through interactive modules and gamified quizzes. Built with Flutter and tested on the Xcode iOS Simulator.
+An educational mobile application designed to teach children aged 6–12 about cyber safety through interactive lessons, gamified quizzes, and motivational rewards. Built with Flutter and tested on the Xcode iOS Simulator.
 
 ### 🚀 Features
 📚 Learning Modules – interactive lessons on safe passwords, scams, online etiquette  
-🎮 Gamified Quizzes – instant feedback and child-friendly design  
-🏆 Completion & Rewards – encourage engagement and motivation  
-🎨 Child-Friendly UI/UX – simple navigation, bright visuals, large buttons
+🎮 Gamified Quizzes – short child-friendly quizzes with child-friendly design    
+🏆 Completion & Rewards – animations and positive reinforcement to encourage engagement   
+🎨 Child-Friendly UI – simple navigation, bright visuals, and large accessible buttons  
+🔒 Privacy by Design – all progress stored locally (no accounts, no personal data)  
 
 ### 🛠️ Tech Stack
 Frontend: Flutter (Dart)  
-Backend (Prototype): Local JSON/state (extendable to SQLite)  
+Backend (Prototype): Local JSON/state (extendable to SQLite) 
+IDE/Tools: Visual Studio Code, GitHub, Flutter DevTools  
 Testing Environment: Xcode Simulator (iOS)
 
 # 📦 Installation
@@ -40,4 +42,5 @@ Testing Environment: Xcode Simulator (iOS)
 ```flutter run```
 
 
-Select your desired iOS device in the simulator (e.g., iPhone 16).
+- Select your desired iOS device in the simulator (e.g., iPhone 16).  
+- For Android testing, run on an Android Emulator via Android Studio.
