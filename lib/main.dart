@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
-import 'pages/learn_page.dart';
-import 'pages/progress_page.dart';
-import 'pages/parent_dashboard_page.dart';
-import 'pages/profile_page.dart';
-import 'pages/quiz_page.dart';
-import 'pages/completion_page.dart';
+
+// Views
+import 'view/home_view.dart';
+import 'view/learn_view.dart';
+import 'view/progress_view.dart';
+import 'view/parent_dashboard_view.dart';
+import 'view/profile_view.dart';
+import 'view/quiz_view.dart';
+import 'view/completion_view.dart';
 
 // Colour scheme for App
 class AppColors {
@@ -18,7 +20,6 @@ class AppColors {
   static const textDark  = Color(0xFF111827); // near-black
 }
 
-// App Theme
 ThemeData _theme() {
   final base = ThemeData(
     useMaterial3: true,
@@ -35,7 +36,6 @@ ThemeData _theme() {
     ),
   );
 
-  // Base theme - text
   return base.copyWith(
     appBarTheme: AppBarTheme(
       backgroundColor: Colors.transparent,
@@ -70,7 +70,6 @@ void main() {
   runApp(const CyberBuddyApp());
 }
 
-// Main App Widget
 class CyberBuddyApp extends StatelessWidget {
   const CyberBuddyApp({super.key});
 
@@ -80,13 +79,13 @@ class CyberBuddyApp extends StatelessWidget {
       title: 'CyberBuddy',
       theme: _theme(),
       routes: {
-        '/': (_) => const HomePage(),
-        LearnPage.route: (_) => const LearnPage(),
-        ProgressPage.route: (_) => const ProgressPage(),
-        ParentDashboardPage.route: (_) => const ParentDashboardPage(),
-        ProfilePage.route: (_) => const ProfilePage(),
-        QuizPage.route: (_) => const QuizPage(),
-        CompletionPage.route: (_) => const CompletionPage(),
+        '/': (_) => const HomeView(),
+        LearnView.route: (_) => const LearnView(),
+        ProgressView.route: (_) => const ProgressView(),
+        ParentDashboardView.route: (_) => const ParentDashboardView(),
+        ProfileView.route: (_) => const ProfileView(),
+        QuizView.route: (_) => const QuizView(),
+        CompletionView.route: (_) => const CompletionView(),
       },
       initialRoute: '/',
     );

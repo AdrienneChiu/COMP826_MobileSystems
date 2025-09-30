@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import '../data/progress_store.dart';
 
-class ProgressPage extends StatelessWidget {
+class ProgressView extends StatelessWidget {
   static const route = '/progress';
-  const ProgressPage({super.key});
+  const ProgressView({super.key});
 
   Future<ProgressData> _load() => ProgressStore.read();
 

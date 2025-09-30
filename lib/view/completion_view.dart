@@ -7,9 +7,9 @@ class CompletionArgs {
   const CompletionArgs({required this.score, required this.total});
 }
 
-class CompletionPage extends StatelessWidget {
+class CompletionView extends StatelessWidget {
   static const route = '/completion';
-  const CompletionPage({super.key});
+  const CompletionView({super.key});
 
   @override
   Widget build(BuildContext context) {

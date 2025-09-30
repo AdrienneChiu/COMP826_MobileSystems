@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import '../data/progress_store.dart';
 
-class ProfilePage extends StatefulWidget {
+class ProfileView extends StatefulWidget {
   static const route = '/profile';
-  const ProfilePage({super.key});
+  const ProfileView({super.key});
 
   @override
-  State<ProfilePage> createState() => _ProfilePageState();
+  State<ProfileView> createState() => _ProfileViewState();
 }
 
-class _ProfilePageState extends State<ProfilePage> {
+class _ProfileViewState extends State<ProfileView> {
   Future<ProgressData> _load() => ProgressStore.read();
 
   @override
