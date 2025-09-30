@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'quiz_page.dart';
+import 'quiz_view.dart';
 
-class LearnPage extends StatelessWidget {
+class LearnView extends StatelessWidget {
   static const route = '/learn';
-  const LearnPage({super.key});
+  const LearnView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class LearnPage extends StatelessWidget {
 
             // Quiz button
             FilledButton.icon(
-              onPressed: () => Navigator.pushNamed(context, QuizPage.route),
+              onPressed: () => Navigator.pushNamed(context, QuizView.route),
               icon: const Icon(Icons.quiz_outlined),
               label: const Text('Take Quiz'),
             ),

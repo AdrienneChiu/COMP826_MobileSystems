@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ParentDashboardPage extends StatelessWidget {
+class ParentDashboardView extends StatelessWidget {
   static const route = '/parent';
-  const ParentDashboardPage({super.key});
+  const ParentDashboardView({super.key});
 
   @override
   Widget build(BuildContext context) {

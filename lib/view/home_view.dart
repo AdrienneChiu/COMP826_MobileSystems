@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import '../widget/common.dart';
 import '../main.dart'; 
-import 'learn_page.dart';
-import 'progress_page.dart';
-import 'parent_dashboard_page.dart';
-import 'profile_page.dart';
+import 'learn_view.dart';
+import 'progress_view.dart';
+import 'parent_dashboard_view.dart';
+import 'profile_view.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
     Padding(
       padding: const EdgeInsets.only(right: 8),
       child: IconButton(
-        onPressed: () => Navigator.pushNamed(context, ProfilePage.route),
+        onPressed: () => Navigator.pushNamed(context, ProfileView.route),
         icon: const CircleAvatar(
           radius: 18,
           child: Icon(Icons.person, size: 20),
@@ -56,21 +56,21 @@ class HomePage extends StatelessWidget {
                     icon: Icons.sports_esports_rounded,
                     label: 'Learn',
                     background: AppColors.greenTile,
-                    onTap: () => Navigator.pushNamed(context, LearnPage.route),
+                    onTap: () => Navigator.pushNamed(context, LearnView.route),
                   ),
                   const SizedBox(height: 50),
                   BigColorTile(
                     icon: Icons.emoji_events_rounded,
                     label: 'Progress',
                     background: AppColors.blueTile,
-                    onTap: () => Navigator.pushNamed(context, ProgressPage.route),
+                    onTap: () => Navigator.pushNamed(context, ProgressView.route),
                   ),
                   const SizedBox(height: 50),
                   BigColorTile(
                     icon: Icons.lock_rounded,
                     label: 'Parent Dashboard',
                     background: AppColors.orangeTile,
-                    onTap: () => Navigator.pushNamed(context, ParentDashboardPage.route),
+                    onTap: () => Navigator.pushNamed(context, ParentDashboardView.route),
                   ),
                 ],
               ),
