@@ -134,6 +134,19 @@ class _QuizViewState extends State<QuizView> {
               children: [
                 // Push stranger bubble a bit lower from the AppBar
                 const SizedBox(height: 24),
+                // Question progress text
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Question ${presenter.current + 1} of ${presenter.total}",
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
 
                 // CHAT AREA
                 Expanded(
