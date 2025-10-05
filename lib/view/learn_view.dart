@@ -24,9 +24,9 @@ class LearnView extends StatelessWidget {
           style: TextStyle(fontSize: 28, fontWeight: FontWeight.w900),
         ),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(25, 20, 25, 28), 
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: 560),
             child: Column(
@@ -42,7 +42,7 @@ class LearnView extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 60),
+                const SizedBox(height: 80),
 
                 _ActionTile(
                   color: AppColors.greenTile,
@@ -63,8 +63,6 @@ class LearnView extends StatelessWidget {
                 ),
                 const SizedBox(height: 60),
 
-                
-
                 _ActionTile(
                   color: AppColors.orangeTile,
                   icon: Icons.menu_book_rounded,
@@ -75,7 +73,7 @@ class LearnView extends StatelessWidget {
 
                 const SizedBox(height: 24),
                 Text(
-                  'Tip: Start with the quiz to practice safe chatting!',
+                  'Note: More Content Coming Soon!',
                   style: text.bodyMedium?.copyWith(
                     fontWeight: FontWeight.w600,
                     color: Colors.black87,
@@ -109,7 +107,7 @@ class _ActionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double tileHeight = 88;   // adjust to taste (82–96 looks good)
+    const double tileHeight = 82;   // adjust to taste (82–96 looks good)
     const double radius = 22;
     const double badge = 54;        // white icon badge
     const double iconSize = 30;
