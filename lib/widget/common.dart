@@ -37,7 +37,7 @@ class TipCard extends StatelessWidget {
                       fontSize: 18, fontWeight: FontWeight.w800,
                     ),
                   ),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 10),
                   Text(
                     text,
                     style: const TextStyle(
@@ -96,7 +96,7 @@ class BigColorTile extends StatelessWidget {
           ],
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 16),
+          padding: const EdgeInsets.symmetric(vertical: 22, horizontal: 12),
           child: Row(
             children: [
               Container(

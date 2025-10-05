@@ -62,15 +62,14 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
+        padding: const EdgeInsets.fromLTRB(25, 8, 25, 16),
         child: Column(
           children: [
             TipCard(
               text: cyberSafetyTips[_tipIndex],
               onNext: _nextTip, // tap the refresh icon to see another tip
             ),
-            const SizedBox(height: 18),
-
+            const SizedBox(height: 80), // gap between tip and tiles
             Expanded(
               child: ListView(
                 children: [
@@ -80,14 +79,14 @@ class _HomePageState extends State<HomePage> {
                     background: AppColors.greenTile,
                     onTap: () => Navigator.pushNamed(context, LearnView.route),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 40),
                   BigColorTile(
                     icon: Icons.emoji_events_rounded,
                     label: 'Progress',
                     background: AppColors.blueTile,
                     onTap: () => Navigator.pushNamed(context, ProgressView.route),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 40),
                   BigColorTile(
                     icon: Icons.lock_rounded,
                     label: 'Parent Dashboard',
