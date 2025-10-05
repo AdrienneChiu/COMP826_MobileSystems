@@ -1,9 +1,11 @@
+// lib/widget/common.dart
 import 'package:flutter/material.dart';
-import '../main.dart'; // for AppColors
+import '../main.dart'; // AppColors
 
 class TipCard extends StatelessWidget {
   final String text;
-  const TipCard({super.key, required this.text});
+  final VoidCallback? onNext; // optional: show another tip
+  const TipCard({super.key, required this.text, this.onNext});
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +28,30 @@ class TipCard extends StatelessWidget {
             ),
             const SizedBox(width: 12),
             Expanded(
-              child: Text(
-                text,
-                style: const TextStyle(
-                  fontSize: 18, height: 1.35, fontWeight: FontWeight.w600),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Daily Tip",
+                    style: TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    text,
+                    style: const TextStyle(
+                      fontSize: 16, height: 1.35, fontWeight: FontWeight.w600),
+                  ),
+                ],
               ),
             ),
+            if (onNext != null)
+              IconButton(
+                tooltip: "New tip",
+                onPressed: onNext,
+                icon: const Icon(Icons.refresh_rounded),
+              ),
           ],
         ),
       ),
