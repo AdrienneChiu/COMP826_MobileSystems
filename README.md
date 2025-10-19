@@ -10,10 +10,12 @@ An educational mobile application designed to teach children aged 6–12 about c
 🔒 Privacy by Design – all progress stored locally (no accounts, no personal data)  
 
 ### 🛠️ Tech Stack
-Frontend: Flutter (Dart)  
-Backend (Prototype): Local JSON/state (extendable to SQLite)   
-IDE/Tools: Visual Studio Code, GitHub, Flutter DevTools  
-Testing Environment: Xcode Simulator (iOS)
+- Frontend: Flutter (Dart)  
+- Backend (Prototype): Local JSON/state (extendable to SQLite)   
+- IDE/Tools: Visual Studio Code, GitHub, Flutter DevTools  
+- Testing Environment: Xcode Simulator (iOS)
+
+<br>
 
 # 📦 Installation
 ### Prerequisites
@@ -26,9 +28,9 @@ Testing Environment: Xcode Simulator (iOS)
   
 ### Steps
 
-1. Clone the repository
+1. Clone the repository on your chosen IDE
 
-  git clone https://github.com/AdrienneChiu/COMP826_MobileSystems.git  
+  ```git clone https://github.com/AdrienneChiu/COMP826_MobileSystems.git```  
 
 
 2. Install dependencies
@@ -46,7 +48,8 @@ Testing Environment: Xcode Simulator (iOS)
 
   Note: Check Flutter setup - Run ```flutter doctor``` to verify Flutter, Xcode, and simulator configurations. This command highlights missing dependencies or version issues.
 
+<br>
 
 # 👩‍💻 Author
 
-Developed by Adrienne Chiu as part of COMP826 Mobile Systems Development.
+Developed by Adrienne Chiu as part of COMP826 Mobile Systems Development at Auckland University of Technology (AUT), Sem 2 2025.
