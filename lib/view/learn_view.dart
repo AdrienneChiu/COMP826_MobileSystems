@@ -53,7 +53,6 @@ class LearnView extends StatelessWidget {
                 ),
                 const SizedBox(height: 60),
 
-                // Fixed-height tiles (stay in place, not stretched)
                 _ActionTile(
                   color: AppColors.blueTile,
                   icon: Icons.sports_esports_rounded,
@@ -89,7 +88,7 @@ class LearnView extends StatelessWidget {
   }
 }
 
-/// Compact, colorful tile (fixed height)
+/// Compact, colourful tile
 class _ActionTile extends StatelessWidget {
   final Color color;
   final IconData icon;
@@ -107,9 +106,9 @@ class _ActionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double tileHeight = 82;   // adjust to taste (82–96 looks good)
+    const double tileHeight = 82;   
     const double radius = 22;
-    const double badge = 54;        // white icon badge
+    const double badge = 54;        
     const double iconSize = 30;
 
     return InkWell(

@@ -46,7 +46,7 @@ class _ProfileViewState extends State<ProfileView> {
 
     if (newName != null && newName.isNotEmpty) {
       await ProgressStore.setPlayerName(newName);
-      setState(() => _editedName = newName); // reflect immediately
+      setState(() => _editedName = newName);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(content: Text('Name saved')),

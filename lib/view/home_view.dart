@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   int _indexForToday() {
-    // Deterministic “tip of the day” — no storage required
+    // Determine “tip of the day” — no storage required
     final days = DateTime.now().difference(DateTime(2020, 1, 1)).inDays;
     return days % cyberSafetyTips.length;
   }
@@ -67,9 +67,9 @@ class _HomePageState extends State<HomePage> {
           children: [
             TipCard(
               text: cyberSafetyTips[_tipIndex],
-              onNext: _nextTip, // tap the refresh icon to see another tip
+              onNext: _nextTip, // tap to refresh and to see another tip
             ),
-            const SizedBox(height: 80), // gap between tip and tiles
+            const SizedBox(height: 80), 
             Expanded(
               child: ListView(
                 children: [

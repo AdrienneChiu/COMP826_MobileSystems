@@ -11,13 +11,13 @@ import 'view/completion_view.dart';
 
 // Colour scheme for App
 class AppColors {
-  static const bgPeach   = Color(0xFFFFE3B3); // page background
-  static const cardWhite = Color(0xFFFFFFFF); // tip card
+  static const bgPeach   = Color(0xFFFFE3B3); // Page background
+  static const cardWhite = Color(0xFFFFFFFF); // Tip card
   static const greenTile = Color(0xFF6BD08C); // Learn
   static const blueTile  = Color(0xFF64B6F7); // Progress
   static const orangeTile= Color(0xFFFFB74D); // Parent Dashboard
 
-  static const textDark  = Color(0xFF111827); // near-black
+  static const textDark  = Color(0xFF111827); // Primary text colour
 }
 
 ThemeData _theme() {

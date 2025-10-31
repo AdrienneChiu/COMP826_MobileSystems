@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/quiz_question.dart';
-import '../presenter/quiz_presenter.dart'; // note: singular 'presenter'
+import '../presenter/quiz_presenter.dart';
 import 'completion_view.dart';
 
 class QuizView extends StatefulWidget {
@@ -59,14 +59,14 @@ class _QuizViewState extends State<QuizView> {
     chat = [presenter.currentQuestion.prompt]; // Stranger’s first message
   }
 
-  // Ensure only one reply bubble (replace if they change their mind)
+  // Ensure only one reply bubble at a time
   void _select(int index) {
     setState(() {
       final reply = presenter.currentQuestion.options[index];
 
       if (presenter.hasSelected) {
         if (chat.length > 1) {
-          chat[1] = reply; // replace prior reply
+          chat[1] = reply; // replace existing reply
         } else {
           chat.add(reply);
         }
@@ -132,7 +132,6 @@ class _QuizViewState extends State<QuizView> {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-                // Push stranger bubble a bit lower from the AppBar
                 const SizedBox(height: 24),
                 // Question progress text
                 Align(
@@ -148,7 +147,7 @@ class _QuizViewState extends State<QuizView> {
                 ),
                 const SizedBox(height: 12),
 
-                // CHAT AREA
+                // Chat Area
                 Expanded(
                   flex: 2,
                   child: ListView.separated(
@@ -169,7 +168,7 @@ class _QuizViewState extends State<QuizView> {
                             ),
                           if (!fromUser) const SizedBox(width: 8),
 
-                          // Animated chat bubble (slide + fade with small delay)
+                          // Animated chat bubble
                           Flexible(
                             child: ChatBubbleAnimated(
                               text: chat[i],
@@ -192,7 +191,7 @@ class _QuizViewState extends State<QuizView> {
 
                 const SizedBox(height: 16),
 
-                // OPTIONS + NEXT (evenly spaced & bigger)
+                // Options and Next button
                 Expanded(
                   flex: 3,
                   child: Column(
@@ -205,7 +204,7 @@ class _QuizViewState extends State<QuizView> {
                           child: ElevatedButton(
                             onPressed: () => _select(i),
                             style: ElevatedButton.styleFrom(
-                              alignment: Alignment.center, // keep text centered
+                              alignment: Alignment.center,
                               padding:
                                   const EdgeInsets.symmetric(vertical: 18),
                               textStyle: const TextStyle(
@@ -277,8 +276,7 @@ class _QuizViewState extends State<QuizView> {
   }
 }
 
-/* ---------- Reusable animated chat bubble with gradients ---------- */
-
+// Animated chat bubble with gradients background
 class ChatBubbleAnimated extends StatefulWidget {
   final String text;
   final bool fromUser;

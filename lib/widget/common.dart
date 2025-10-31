@@ -1,10 +1,10 @@
 // lib/widget/common.dart
 import 'package:flutter/material.dart';
-import '../main.dart'; // AppColors
+import '../main.dart'; 
 
 class TipCard extends StatelessWidget {
   final String text;
-  final VoidCallback? onNext; // optional: show another tip
+  final VoidCallback? onNext; 
   const TipCard({super.key, required this.text, this.onNext});
 
   @override
