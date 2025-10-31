@@ -79,7 +79,7 @@ class CyberBuddyApp extends StatelessWidget {
       title: 'CyberBuddy',
       theme: _theme(),
       routes: {
-        '/': (_) => const HomeView(),
+        '/': (_) => const HomePage(),
         LearnView.route: (_) => const LearnView(),
         ProgressView.route: (_) => const ProgressView(),
         ParentDashboardView.route: (_) => const ParentDashboardView(),
