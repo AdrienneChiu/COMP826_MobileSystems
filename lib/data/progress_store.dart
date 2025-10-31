@@ -1,4 +1,4 @@
-// persistence / local storage
+// lib/data/progress_store.dart (or progress.dart)
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Data class to hold progress info
@@ -7,12 +7,14 @@ class ProgressData {
   final int bestScore;
   final int bestScoreOutOf;
   final bool soundOn;
+  final String playerName; // NEW
 
   const ProgressData({
     required this.quizzesTaken,
     required this.bestScore,
     required this.bestScoreOutOf,
     required this.soundOn,
+    required this.playerName, // NEW
   });
 }
 
@@ -22,6 +24,7 @@ class ProgressStore {
   static const _kBestScore = 'best_score';
   static const _kBestOutOf = 'best_out_of';
   static const _kSoundOn = 'sound_on';
+  static const _kPlayerName = 'player_name'; // NEW
 
   static Future<SharedPreferences> _prefs() async =>
       await SharedPreferences.getInstance();
@@ -33,6 +36,7 @@ class ProgressStore {
       bestScore: p.getInt(_kBestScore) ?? 0,
       bestScoreOutOf: p.getInt(_kBestOutOf) ?? 0,
       soundOn: p.getBool(_kSoundOn) ?? true,
+      playerName: p.getString(_kPlayerName) ?? 'Player', // NEW default
     );
   }
 
@@ -60,12 +64,19 @@ class ProgressStore {
     await p.setBool(_kSoundOn, value);
   }
 
-  // Reset all progress
+  // NEW: save player name
+  static Future<void> setPlayerName(String name) async {
+    final p = await _prefs();
+    await p.setString(_kPlayerName, name);
+  }
+
+  // Reset all progress (keeps player name)
   static Future<void> reset() async {
     final p = await _prefs();
     await p.remove(_kQuizzesTaken);
     await p.remove(_kBestScore);
     await p.remove(_kBestOutOf);
     await p.remove(_kSoundOn);
+    // intentionally NOT removing _kPlayerName
   }
 }

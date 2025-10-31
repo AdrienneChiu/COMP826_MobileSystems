@@ -10,7 +10,7 @@ An educational mobile application designed to teach children aged 6–12 about c
 🔒 Privacy by Design – all progress stored locally (no accounts, no personal data)  
 
 ### 🛠️ Tech Stack
-Frontend: Flutter (Dart)  
+Frontend: Flutter (Dart)  r
 Backend (Prototype): Local JSON/state (extendable to SQLite)   
 IDE/Tools: Visual Studio Code, GitHub, Flutter DevTools  
 Testing Environment: Xcode Simulator (iOS)
